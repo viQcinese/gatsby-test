@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../../components/Layout"
 
+import { Description } from "./_styles"
+
 export default function About() {
   return (
-    <Layout>
-      <h1 style={{ color: "purple" }}>About Page</h1>
+    <Layout title="About">
+      <Description>Something to describe</Description>
       <img src="https://source.unsplash.com/random/400x200" alt="" />
     </Layout>
   )

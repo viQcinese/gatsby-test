@@ -3,8 +3,7 @@ import Layout from "../../components/Layout"
 
 export default function Contact() {
   return (
-    <Layout>
-      <h1 style={{ color: "purple" }}>Contact Page</h1>
+    <Layout title="Contact">
       <img src="https://source.unsplash.com/random/400x200" alt="" />
     </Layout>
   )

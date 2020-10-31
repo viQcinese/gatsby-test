@@ -1,7 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-export default function Layout({ children }) {
+import { Title } from "./styles"
+
+export default function Layout({ title, children }) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -17,11 +19,12 @@ export default function Layout({ children }) {
   return (
     <div style={{ margin: `3rem auto`, maxWidth: 650 }}>
       <div>
-        <h1>{data.site.siteMetadata.title}</h1>
+        <Title>{data.site.siteMetadata.title}</Title>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </div>
+      <h1>{title}</h1>
       {children}
     </div>
   )

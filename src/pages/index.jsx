@@ -6,8 +6,7 @@ import Layout from "../components/Layout"
 
 export default function Home({ data }) {
   return (
-    <Layout>
-      <h1>Blog Posts</h1>
+    <Layout title="Index">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <h3>
