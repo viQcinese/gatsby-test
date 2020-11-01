@@ -3,12 +3,14 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 
+import { MainTitle } from "./styles"
+
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
 
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
+      <MainTitle>{post.frontmatter.title}</MainTitle>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
